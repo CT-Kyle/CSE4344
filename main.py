@@ -219,14 +219,24 @@ def makeDic(q):
 
 def main(filename=""):
 
-    filenamee = "/Users/Caleb/CSE4344/CSE4344/flows.txt"
+    filenamee = "/Users/viral/Documents/SMU/Fall 2015/Networks/CSE4344/inputflows.txt"
     f = readFile(filenamee)
     d = makeDic(f)
 
     if filename:
         node_list, network = load_from_file(filename)
+        print "node_list"
+        print node_list
+        print "network"
+        print network
+        print "HI"
     else:
         node_list, network = create_network(nodes=9, fixed_capacity=1)
+        print "node_list"
+        print node_list
+        print "network"
+        print network
+        print "stop"
     set_up_network(node_list, network)
 
     packets_to_send = [  # (iteration#, source, dest, size)
